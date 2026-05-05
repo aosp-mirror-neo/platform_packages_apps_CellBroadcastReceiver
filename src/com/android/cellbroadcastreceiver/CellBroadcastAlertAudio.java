@@ -556,13 +556,7 @@ public class CellBroadcastAlertAudio extends Service implements TextToSpeech.OnI
                         break;
                     case INFO:
                     case AREA:
-                        if (getPackageManager().hasSystemFeature(PackageManager.FEATURE_WATCH)) {
-                            //TODO(b/279183006): remove watch workaround when URI supported.
-                            setDataSourceFromResource(res, mMediaPlayer, R.raw.watch_info);
-                        } else {
-                            mMediaPlayer.setDataSource(this,
-                                    Settings.System.DEFAULT_NOTIFICATION_URI);
-                        }
+                        mMediaPlayer.setDataSource(this, Settings.System.DEFAULT_NOTIFICATION_URI);
                         break;
                     case TEST:
                     case DEFAULT:
