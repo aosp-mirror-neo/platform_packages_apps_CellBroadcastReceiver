@@ -659,6 +659,10 @@ public class CellBroadcastListActivityTest extends
         activity.mListFragment.getMultiChoiceModeListener().onActionItemClicked(mode, mockMenuItem);
 
         verify(mode, times(2)).finish();
+        if (mIsWatch) {
+            verify(mockAlertDialogBuilder, never()).show();
+            return;
+        }
         verify(mockAlertDialogBuilder).show();
 
         // getColumnIndex is called 13 times within CellBroadcastCursorAdapter.createFromCursor

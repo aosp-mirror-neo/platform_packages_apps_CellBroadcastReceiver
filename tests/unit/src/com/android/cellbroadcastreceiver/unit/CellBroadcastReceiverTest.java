@@ -244,6 +244,7 @@ public class CellBroadcastReceiverTest extends CellBroadcastTest {
         doReturn(mResources).when(mContext).getResources();
         doReturn(mPackageManager).when(mContext).getPackageManager();
         doReturn(isWatch).when(mPackageManager).hasSystemFeature(PackageManager.FEATURE_WATCH);
+        doReturn(true).when(mUserManager).isSystemUser();
     }
 
     @Test
