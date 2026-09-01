@@ -251,6 +251,9 @@
     <!-- Whether the emergency alert notification is non-swipeable -->
     <bool name="non_swipeable_notification">false</bool>
 
+    <!-- Whether the Emergency Alert On-Device translation is enabled or not -->
+    <bool name="enable_alert_translation">false</bool>
+
     <!-- Text links generating method. Could be one of the followings.
          "none": Not adding any link to message texts.
          "legacy_linkify": Use the legacy linkify to add links to message texts.
@@ -303,4 +306,8 @@
 
     <!-- Whether to restore the sub-toggle setting to carrier default -->
     <bool name="restore_sub_toggle_to_carrier_default">false</bool>
+
+    <!-- Whether to enable the map functionality to display the alert location on a map when
+     location information is available in the alert. -->
+    <bool name="enable_map">false</bool>
 </resources>
